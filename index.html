@@ -57,20 +57,58 @@
             padding: 20px 40px;
             border-radius: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            /* SOLUCIÓN AL PROBLEMA DEL CLIC */
-            pointer-events: none; /* Hace que el contenedor sea "invisible" al ratón */
+            pointer-events: none;
         }
 
         header h1, header h2 {
-            /* SOLUCIÓN AL PROBLEMA DEL CLIC */
-            pointer-events: auto; /* Hace que el texto SÍ sea interactivo de nuevo */
+            pointer-events: auto;
         }
         
         header h1 { font-size: 2.5em; font-weight: 700; margin: 0; }
         header h2 { font-size: 1.4em; font-weight: 400; opacity: 0.9; margin: 5px 0 0; }
         header img { display: none; }
         
-        .contact-info{background:#f8f9fa;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #e9ecef;flex-wrap:wrap}.contact-info div{text-align:center;padding:5px 10px}.contact-info strong{display:block;color:#d35400;font-size:.9em;margin-bottom:5px}.contact-info a{color:#333;text-decoration:none;transition:color .3s}.contact-info a:hover{color:#f39c12}.main-content{padding:30px 40px}section{margin-bottom:30px}h3{color:#2c3e50;padding-bottom:10px;margin-bottom:20px;font-size:1.5em;display:flex;align-items:center;position:relative}h3::before{content:'●';margin-right:10px;color:#f39c12}h3::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:#f39c12;transform:scaleX(0);transform-origin:left}ul{list-style:none;padding:0}ul li{margin-bottom:10px;position:relative;padding-left:20px}ul li::before{content:'•';position:absolute;left:0;color:#f39c12;font-weight:bold}.job-title,.degree-title{font-weight:700;font-size:1.2em;color:#34495e}.company,.institution{font-style:italic;color:#555;margin-bottom:10px}.skills-container,.additional-info-container{display:grid;grid-template-columns:1fr 1fr;gap:40px}.skills-category h4,.additional-info-container h4{font-size:1.2em;color:#333;margin-bottom:15px}.tags{display:flex;flex-wrap:wrap;gap:10px}.tag{background-color:#fef5e7;color:#b9770e;padding:8px 15px;border-radius:20px;font-size:.9em;font-weight:500}.projects-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.project-card{background:#fdfdfd;border:1px solid #e9ecef;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .3s,box-shadow .3s}.project-card:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(44,62,80,.1)}.project-card img{width:100%;height:200px;object-fit:cover;display:block}.project-card-content{padding:20px}.project-card h4{margin-top:0;font-size:1.3em;color:#2c3e50}.project-card p{margin-bottom:15px;min-height:60px}.project-card a{color:#f39c12;text-decoration:none;font-weight:bold;display:inline-block}.project-card a:hover{color:#d35400;text-decoration:underline}@media (max-width:768px){body{padding:0}.resume-container{border-radius:0;box-shadow:none}header{flex-direction:column-reverse;text-align:center;padding:30px 20px;height:auto;min-height:350px}.header-content{background:rgba(44,62,80,.7);width:calc(100% - 40px)}.contact-info{flex-direction:column;gap:15px;padding:20px}.main-content{padding:20px}.skills-container,.additional-info-container{grid-template-columns:1fr}}
+        .contact-info{background:#f8f9fa;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #e9ecef;flex-wrap:wrap}.contact-info div{text-align:center;padding:5px 10px}.contact-info strong{display:block;color:#d35400;font-size:.9em;margin-bottom:5px}.contact-info a{color:#333;text-decoration:none;transition:color .3s}.contact-info a:hover{color:#f39c12}.main-content{padding:30px 40px}section{margin-bottom:30px}h3{color:#2c3e50;padding-bottom:10px;margin-bottom:20px;font-size:1.5em;display:flex;align-items:center;position:relative}h3::before{content:'●';margin-right:10px;color:#f39c12}h3::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:#f39c12;transform:scaleX(0);transform-origin:left}ul{list-style:none;padding:0}ul li{margin-bottom:10px;position:relative;padding-left:20px}ul li::before{content:'•';position:absolute;left:0;color:#f39c12;font-weight:bold}.job-title,.degree-title{font-weight:700;font-size:1.2em;color:#34495e}.company,.institution{font-style:italic;color:#555;margin-bottom:10px}.skills-container,.additional-info-container{display:grid;grid-template-columns:1fr 1fr;gap:40px}.skills-category h4,.additional-info-container h4{font-size:1.2em;color:#333;margin-bottom:15px}.tags{display:flex;flex-wrap:wrap;gap:10px}.tag{background-color:#fef5e7;color:#b9770e;padding:8px 15px;border-radius:20px;font-size:.9em;font-weight:500}.projects-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.project-card{background:#fdfdfd;border:1px solid #e9ecef;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:transform .3s,box-shadow .3s}.project-card:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(44,62,80,.1)}.project-card img{width:100%;height:200px;object-fit:cover;display:block}.project-card-content{padding:20px}.project-card h4{margin-top:0;font-size:1.3em;color:#2c3e50}.project-card p{margin-bottom:15px;min-height:60px}.project-card a{color:#f39c12;text-decoration:none;font-weight:bold;display:inline-block}.project-card a:hover{color:#d35400;text-decoration:underline}
+
+        /* --- RESPONSIVE DESIGN FOR MOBILE --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            .resume-container {
+                border-radius: 0;
+                box-shadow: none;
+            }
+            header {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 20px;
+                /* CAMBIO 1: Altura proporcional en vez de fija */
+                height: 60vh; 
+            }
+            .header-content {
+                width: calc(100% - 40px);
+                background:rgba(44,62,80,.7);
+            }
+            /* CAMBIO 2: Texto más pequeño en móvil */
+            header h1 {
+                font-size: 1.8em; 
+            }
+            header h2 {
+                font-size: 1.1em;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            .main-content {
+                padding: 20px;
+            }
+            .skills-container, .additional-info-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
